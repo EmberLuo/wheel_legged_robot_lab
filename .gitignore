@@ -9,6 +9,8 @@
 **/.pytest_cache/
 **/*.pyc
 **/*.pb
+pip-build-env-*/
+pip-build-tracker-*/
 
 # IDE
 **/.idea/
