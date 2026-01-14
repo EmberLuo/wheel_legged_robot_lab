@@ -192,11 +192,12 @@ python scripts/reinforcement_learning/rsl_rl/play.py --task=RobotLab-Isaac-Veloc
 > ====================== ========================= ========================
 > ```
 
-* Record video of a trained agent (requires installing `ffmpeg`), add `--video --video_length 200`
-* Play/Train with custom number of environments, add `--num_envs <number>`
-* Play on specific folder or checkpoint, add `--load_run run_folder_name --checkpoint /PATH/TO/model.pt`
-* Resume training from folder or checkpoint, add `--resume --load_run run_folder_name --checkpoint /PATH/TO/model.pt`
-* To train with multiple GPUs, use the following command, where --nproc_per_node represents the number of available GPUs:
+- Record video of a trained agent (requires installing `ffmpeg`), add `--video --video_length 200`
+- Play/Train with custom number of environments, add `--num_envs <number>`
+- Play on specific folder or checkpoint, add `--load_run run_folder_name --checkpoint /PATH/TO/model.pt`
+- Resume training from folder or checkpoint, add `--resume --load_run run_folder_name --checkpoint /PATH/TO/model.pt`
+- To train with multiple GPUs, use the following command, where --nproc_per_node represents the number of available GPUs:
+
     ```bash
     python -m torch.distributed.run --nnodes=1 --nproc_per_node=2 scripts/reinforcement_learning/rsl_rl/train.py --task=RobotLab-Isaac-Velocity-Flat-Wheel-Legged-Universal-v0 --headless --distributed
     ```
@@ -218,7 +219,9 @@ To view tensorboard for your training results, run:
 ```bash
 tensorboard --logdir=logs/rsl_rl/RobotLab-Isaac-Velocity-Flat-Wheel-Legged-Universal-v0
 ```
+
 or for rough terrain:
+
 ```bash
 tensorboard --logdir=logs/rsl_rl/RobotLab-Isaac-Velocity-Rough-Wheel-Legged-Universal-v0
 ```
